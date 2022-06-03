@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    height: 100vh;
+    /* Prendra 100% de la hauteur du viewport, et donc de l'écran */
+}
+
+.parallax1 {
+    background-color: whitesmoke;
+    height: 10vh;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 1%;
+}
+
+.parallax2 {
+    background-image: url("../res/img/palpatine.png");
+}
+
+.parallax3 {
+    background-image: url("../res/img/boba.png");
+}

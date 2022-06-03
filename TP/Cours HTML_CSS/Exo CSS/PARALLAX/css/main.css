@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 1%;
+    position: sticky;
+    top: 0;
+    background: lightgray;
+}
+
+h1 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-right: 2%;
+    transition: all 1.5s;
+    float: right;
+}
+
+a:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+    transition: all 1.5s;
+}
+
+li {
+    display: inline-flex;
+}
+
+li:hover {
+    background: red;
+    border-radius: 20%;
+}
+
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    background: white;
+    height: 13vh;
+    text-align: center;
+}
+
+.parallax2 {
+    background-image: url("../res/img/machu.png");
+}
+
+.parallax3 {
+    background-image: url("../res/img/mu_cang.png");
+}
+
+.parallax4 {
+    background-image: url("../res/img/great.png");
+}
+
+.parallax5 {
+    background-image: url("../res/img/falaise.png");
+}

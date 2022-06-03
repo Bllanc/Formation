@@ -1,0 +1,38 @@
+body {
+    width: 60%;
+    margin: 0 20%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border: 3px solid black;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    background: #ccc;
+}
+
+th:first-child,
+td:first-child {
+    text-align: left;
+}
