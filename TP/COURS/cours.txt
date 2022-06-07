@@ -1,3 +1,16 @@
 height + line-height à la même valeur pour centrer du texte verticalement
 
 img remplisse le parents la mettre en display block (width:100% si bessoin)
+
+
+
+
+JS
+
+
+
+Pour initialiser une constante
+La constante ne peut subir qu'une seule initialisation
+
+cont nom="Allan";
+const age=26;
