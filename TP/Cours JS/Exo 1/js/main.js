@@ -75,3 +75,21 @@ fruits.pop(); // supprimer le dernier element
 console.log(fruits.indexOf("orange")); // retourne l’index de l'element orange
 console.log(Array.isArray(fruits)); // true
 console.log(fruits);
+
+console.log("=========================");
+
+const personne = {
+    prenom: "Allan",
+    nom: "Averlan",
+    age: 26,
+    passions: ["foot", "natation", "jeux videos"],
+    adresse: {
+        rue: "752 Rue de L'Eglise",
+        ville: "Hames-Boucres",
+        pays: "France"
+    }
+};
+// afficher un objet
+console.log(personne);
+// acces aux attributs de l'objet
+console.log(personne.prenom); // acces au prenom
