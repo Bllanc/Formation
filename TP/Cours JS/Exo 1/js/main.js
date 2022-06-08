@@ -49,8 +49,15 @@ console.log("=========================");
 
 console.log(`Sous chaine : ${nom.substring(0,4).toUpperCase()}`); // prend les 4 caract et les transforme en maj
 console.log(nom.split('')); // decoupe la chaine en caractères
+
 const nomComplet = "Dalian Le Boss";
 console.log(nomComplet.split(' ')); // decoupe la chaine selon un séparateur (dans ce cas, c'est l'espace) 3 mots
+
+const phrase = "Bonjour, je suis à la maison";
+console.log(phrase.split(','));
+
+const region = "hauts-de-france";
+console.log(region.split('-'));
 
 document.getElementById("age").innerHTML = `J'ai ${age} ans`;
 
@@ -79,17 +86,22 @@ console.log(fruits);
 console.log("=========================");
 
 const personne = {
-    prenom: "Allan",
-    nom: "Averlan",
-    age: 26,
+    prenom: "Julien",
+    nom: "La Garde",
+    age: 30,
     passions: ["foot", "natation", "jeux videos"],
     adresse: {
-        rue: "752 Rue de L'Eglise",
-        ville: "Hames-Boucres",
+        rue: "Rue Nationale",
+        ville: "Lille",
         pays: "France"
     }
 };
-// afficher un objet
-console.log(personne);
-// acces aux attributs de l'objet
-console.log(personne.prenom); // acces au prenom
+
+console.log(personne); // afficher un objet
+console.log(personne.prenom); // acces aux attributs de l'objet.acces au prenom
+console.log(personne.passions[0]); // acces au 1er element des passions
+console.log(personne.adresse.rue); // acces a la rue (qui est lui meme un attribut de l 'objet adresse')
+personne.prenom = "Julie"; // modifie la valeur d'un attribut
+console.log(personne.prenom); // afficher la nouvelle valeur
+personne.email = "julie@example.com"; // ajout d'un nouvel attribut
+console.log(personne); // affiche le nouvel attribut
