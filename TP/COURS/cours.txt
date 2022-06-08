@@ -12,5 +12,5 @@ JS
 Pour initialiser une constante
 La constante ne peut subir qu'une seule initialisation
 
-cont nom="Allan";
-const age=26;
+cont nom="Allan";     STRING
+const age=26;         NUMBER
