@@ -101,9 +101,28 @@ console.log(personne.prenom); // acces aux attributs de l'objet.acces au prenom
 console.log(personne.passions[0]); // acces au 1er element des passions
 console.log(personne.passions[2]); // acces au 1er element des passions
 console.log(personne.adresse.rue); // acces a la rue (qui est lui meme un attribut de l 'objet adresse')
-personne.prenom = "Julie"; // modifie la valeur d'un attribut
+console.log(personne.adresse.pays); // acces a la rue (qui est lui meme un attribut de l 'objet adresse')
+personne.prenom = "Jean-Paul"; // modifie la valeur d'un attribut
 console.log(personne.prenom); // afficher la nouvelle valeur
-personne.email = "julie@example.com"; // ajout d'un nouvel attribut
+console.log("avant : " + personne.passions[0]);
+personne.passions[0] = "Lecture";
+console.log("aprés : " + personne.passions[0]);
+
+
+// Changement de l'élément adresse en modifiant la rue la ville et le pays.
+personne.adresse = {
+    rue: "75 Boulevard Beverly Hills",
+    ville: "Californie",
+    pays: "USA"
+}
+
+console.log("Rue : " + personne.adresse.rue + " /Ville : " + personne.adresse.ville + " /Pays : " + personne.adresse.pays);
+
+
+
+
+
+personne.email = "jean-paul@wanadoo.fr"; // ajout d'un nouvel attribut
 console.log(personne); // affiche le nouvel attribut
 
 console.log("=========================");
@@ -131,5 +150,5 @@ const todos = [{
 ];
 // afficher un tableau d'objets
 console.log(todos);
-// afficher l'attribut text du 1e r objet du tableau
+// afficher l'attribut text du 1er objet du tableau
 console.log(todos[0].text);
