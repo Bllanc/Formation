@@ -64,7 +64,6 @@ document.getElementById("age").innerHTML = `J'ai ${age} ans`;
 console.log("=========================");
 
 // decla de tableaux
-const numbers = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 const fruits = ["mangue", "pastèque", "poire", "orange", "ananas", "pomme", "abricot", "peche"];
 
 // acces a un element du tableau
@@ -89,7 +88,7 @@ const personne = {
     prenom: "Julien",
     nom: "La Garde",
     age: 30,
-    passions: ["foot", "natation", "jeux videos"],
+    passions: ["Foot", "Natation", "Jeux Videos"],
     adresse: {
         rue: "Rue Nationale",
         ville: "Lille",
@@ -100,8 +99,37 @@ const personne = {
 console.log(personne); // afficher un objet
 console.log(personne.prenom); // acces aux attributs de l'objet.acces au prenom
 console.log(personne.passions[0]); // acces au 1er element des passions
+console.log(personne.passions[2]); // acces au 1er element des passions
 console.log(personne.adresse.rue); // acces a la rue (qui est lui meme un attribut de l 'objet adresse')
 personne.prenom = "Julie"; // modifie la valeur d'un attribut
 console.log(personne.prenom); // afficher la nouvelle valeur
 personne.email = "julie@example.com"; // ajout d'un nouvel attribut
 console.log(personne); // affiche le nouvel attribut
+
+console.log("=========================");
+
+const todos = [{
+        id: 1,
+        text: "Faire les courses",
+        isCompleted: true,
+    },
+    {
+        id: 2,
+        text: "Balade au vieux Lille",
+        isCompleted: true,
+    },
+    {
+        id: 3,
+        text: "Préparer le diner",
+        isCompleted: false,
+    },
+    {
+        id: 4,
+        text: "Regarder la TV",
+        isCompleted: false,
+    },
+];
+// afficher un tableau d'objets
+console.log(todos);
+// afficher l'attribut text du 1e r objet du tableau
+console.log(todos[0].text);
