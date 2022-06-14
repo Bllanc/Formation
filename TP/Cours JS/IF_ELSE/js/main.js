@@ -41,4 +41,4 @@ if ((z > w && z < 20) || (w == 14 && z == 10)) { // Si ((z sup a w et z inf a 20
 
 
 
-const msg = x > 10 ? console.log("qte permise") : console.log("qte non permisse");
+const msg = x > 10 ? console.log("qte permise") : console.log("qte non permisse"); // Affectation conditionné

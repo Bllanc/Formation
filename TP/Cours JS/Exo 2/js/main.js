@@ -18,7 +18,7 @@ function testDate() {
 
 }
 
-testDate(); // essaie de la fonction testDate
+testDate(); // appel de la fonction testDate
 
 
 // Code Simplifié 
@@ -31,3 +31,8 @@ function testDate() {
 }
 document.write("<br><br>")
 testDate();
+
+
+const date = new Date();
+document.write("<br><br>")
+document.write(`${date.getMonth() + 1 < 10 ? "0" : "" }${date.getMonth() + 1 }`) // Afficahge conditionné
