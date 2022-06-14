@@ -117,11 +117,6 @@ personne.adresse = {
 }
 
 console.log("Rue : " + personne.adresse.rue + " /Ville : " + personne.adresse.ville + " /Pays : " + personne.adresse.pays);
-
-
-
-
-
 personne.email = "jean-paul@wanadoo.fr"; // ajout d'un nouvel attribut
 console.log(personne); // affiche le nouvel attribut
 
@@ -150,5 +145,29 @@ const todos = [{
 ];
 // afficher un tableau d'objets
 console.log(todos);
-// afficher l'attribut text du 1er objet du tableau
-console.log(todos[0].text);
+
+console.log(todos[3].text); // afficher l'attribut text du 4eme objet du tableau.
+console.log(todos[2].id); // afficher l'attribut id du 3eme objet du tableau.
+
+todos[2].isCompleted = true; // changement de la valeur isCompleted du 3eme éléments.
+console.log(todos[2].isCompleted);
+
+todos[3].text = "Faire du Sport"; // changement de la valeur text du 4eme element.
+console.log(todos[3].text);
+
+// 1ere solution
+todos[4] = {
+    id: 5,
+    text: "Integration de maquette",
+    isCompleted: false
+}
+console.log(todos);
+
+//2eme solution
+let envoie = { id: 5, text: "Integration de maquette", isCompleted: false }
+todos.push(envoie);
+console.log(todos);
+todos[4] = { id: 5, text: "Integration de maquette", isCompleted: false };
+
+//3eme solution
+todos.push({ id: 5, text: "Integration de maquette", isCompleted: false });
