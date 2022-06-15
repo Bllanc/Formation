@@ -1,12 +1,10 @@
-let notes = [14, 13, 12, 05, 27, 01, 08, 25, 75]
+const notes = [14, 13, 12, 05, 27, 01, 08, 25, 75]
 let somme = 0;;
 
 for (let i = 0; i < notes.length; i++) { // Pour i = 0 ; tant que i est inf a la longeur du tableau; j'incrémente de 1 valeur
     somme += notes[i]; // sommes = + une valeur du tableau[ i + 1 ] 
 }
 document.write(`La somme du tableau est :  ${somme} <br>`) // Afficahge sur le body
-
-
 
 function calcMoyenne(notes) {
     let m = 0;
@@ -18,7 +16,8 @@ function calcMoyenne(notes) {
 document.write(`La moyenne du tableau est :  ${calcMoyenne(notes)}<br>`) // Affichage sur le body
 
 
-// Version de Jerome
+// Version de Jerome simplifié
+document.write("--------------------------------------<br>");
 
 function testTableau() {
     const tableau = [14, 13, 12, 05, 27, 01, 08, 25, 75];
