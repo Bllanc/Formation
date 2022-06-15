@@ -1,4 +1,4 @@
-primes = [
+const primes = [
     { id: 1, perf: 10 },
     { id: 2, perf: 56 },
     { id: 3, perf: 41.25 },
@@ -9,7 +9,6 @@ primes = [
     { id: 8, perf: 82 },
     { id: 9, perf: 52.47 }
 ]
-
 
 
 //pour chacun des employés, calculer sa prime et faire l'affichage suivant:
