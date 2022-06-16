@@ -46,4 +46,4 @@ tab.map(
 );
 
 // utilisation du cumul : à l'extérieur et apres
-document.write(`La some du tab est : ${some}, la moyenne est : ${some / tab.length}`);
+document.write(`La some du tab est : ${some}, la moyenne est : ${(some / tab.length).toFixed(2)}`);
