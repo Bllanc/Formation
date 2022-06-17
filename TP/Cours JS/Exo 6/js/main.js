@@ -32,6 +32,7 @@ voitures.map(voiture => {
         msg = `Marque : ${voiture.marque} | Puissance :${voiture.puissances} <br>`; // Alors on affiche ce message
     }
     document.write(msg);
+
 });
 
 document.write("=========================== <br>")
@@ -39,3 +40,13 @@ document.write("=========================== <br>")
 let tab = voitures.map((voiture) => document.write(voiture.puissances >= 10 ? `Marque : ${voiture.marque} | Puissance :${voiture.puissances} <br>` : ``)); // Afficahge dans le body
 
 document.write("=========================== <br>")
+
+/*
+Lecture de l'énoncé
+Analyse de la demande 
+Détermine la structure de la solution 
+Déterminer les traitements nécessaires
+Si il s'agit d'un afficahge , il faut le mettre en dur puis le dynamiser
+Si il y a des données iconnues dans l'affichage, il faut les chercher avant puis revenir les ajoutés dans l'affichage
+Faire les simplifications et/ou les factorisations nécessaires
+*/
