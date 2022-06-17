@@ -1,16 +1,6 @@
 //ecrire une fonction qui retourne les nombre impairs
 
-/*
-let nbr = 0;
-for (i = 1; i < 100; i = i + 2) {
-    nbr = i;
-    document.write(i + ',&nbsp');
-}
-*/
-
-
 //La portée c'est le niveaux de visibilité d'une variable.
-
 
 function nbrImpaire() {
     let tab = [];
@@ -21,7 +11,6 @@ function nbrImpaire() {
 };
 let tableau = nbrImpaire(); // Mise du résultats de la fonction en variable
 document.write(tableau); // Afficahge sur le body
-
 
 
 /*
