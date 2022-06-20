@@ -1,32 +1,23 @@
 //ex 1 : écrire une fonction qui remplit un tab de 100 entiers consécutifs [1-100]
 //ex 2 : écrire une autre fonction qui affiche les nombre pairs d'un tab de 100 entiers consécutifs (les deux ex sont dependants)
 
+let tab1 = [];
+
 function remplir() {
-    let tab1 = [];
     for (let i = 0; i <= 100; i++) { // Pour i = 1; i inf à 99; on incrémente de 2
         tab1.push(i); // Push de i dans une variable tableau
-
     };
-    console.log(tab1);
-    return tab1; // Le return permet de quitter la fonction
 };
 
-function paire(tab) {
-    let newTab = [];
-    tab.map((variable) => {
+function paire() {
+    tab1.map((variable) => {
         if (variable % 2 == 0) { // Si valeur % 2 == 0 alors pair
-            newTab.push(variable); // Ajouter dans nouveau tableau
+            document.write(variable);
         }
     })
-    console.log(newTab);
-    return newTab; // Retour du nouveau tableau de pair
 };
-
-paire(remplir()).map((variable) => { // Boucle pour chaque valeur de la valeur retourner par la fonction remplir
-    document.write(variable);
-    console.log(variable);
-})
-
+remplir();
+paire();
 
 /*
 Lecture de l'énoncé
