@@ -18,8 +18,44 @@ function verif() {
     document.getElementById("resultat").innerHTML = `Son Index est ${tab.find(checkTab)}`; // Cherche dans le tab si la valeur rentrer dans l'input y est contenue et Affiche l'Index ou Undefined
 }
 
+document.write(`<br><br>Version de Rayen : <br><br> `);
 
+function recherche(tab, val) {
+    for (let i = 0; i <= tab.length; i++) {
+        if (tab[i] == val) {
+            return i + 1;
+        }
+    }
+    return false;
+}
 
+let nbTab = [12, 30, 45, 78, 74, 02, 08, 89, 74, 25, 36, 91, 10];
+let valeur = 145;
+
+// 1ere solution
+// if (recherche(nbTab, valeur) === false) {
+//   document.write(`la valeur ${valeur} n'existe pas`)
+// }
+// else {
+//   let position = recherche(nbTab, valeur);
+//   document.write(`la valeur ${valeur} se trouve à la position ${position} dans le tableau`)
+// }
+
+// simplification
+let position = recherche(nbTab, valeur);
+
+// if (position === false) {
+//   document.write(`la valeur ${valeur} n'existe pas`)
+// }
+// else {
+//   document.write(`la valeur ${valeur} se trouve à la position ${position} dans le tableau`)
+// }
+
+// utilisation du ternaire
+// let msg = position === false ? `la valeur ${valeur} n'existe pas` : `la valeur ${valeur} se trouve à la position ${position} dans le tableau`;
+// document.write(msg);
+
+document.write(position === false ? `la valeur ${valeur} n'existe pas` : `la valeur ${valeur} se trouve à la position ${position} dans le tableau`);
 
 /*
 Lecture de l'énoncé
