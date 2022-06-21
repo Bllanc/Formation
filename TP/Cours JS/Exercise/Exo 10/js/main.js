@@ -1,4 +1,4 @@
-//chercher une valeur donnée dans un tab, si elle existe, renvoyer sa position( position naturelle), false sinon
+//chercher une valeur donnée dans un tab, si elle existe, renvoyer sa position(position naturelle), false sinon
 
 let tab = [];
 
