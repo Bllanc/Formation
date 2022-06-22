@@ -13,10 +13,11 @@ function maxI(tabNb) {
             nbMin = tabNb[i]; // alors on écrase la valeur de i jusqua ce que la plus petite valeur soit atteinte.
         }
     };
-    document.write(`La valeur min est ${nbMin} est la valeur max est ${nbMaxi}<br>=======================<br>`); // Affichage sur le body du nombre min et  max.
-    return nbMaxi, nbMin;
+    return [nbMaxi, nbMin]; // Retour sous forme de tableau
 };
-maxI(tabNb);
+let [nbMaxi, nbMin] = maxI(tabNb);;
+document.write(`La valeur min est ${nbMin} est la valeur max est ${nbMaxi}<br>=======================<br>`); // Affichage sur le body du nombre min et max.
+
 
 /*
 Lecture de l'énoncé

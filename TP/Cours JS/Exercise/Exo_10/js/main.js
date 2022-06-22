@@ -30,7 +30,7 @@ function recherche(tab, val) {
 }
 
 let nbTab = [12, 30, 45, 78, 74, 02, 08, 89, 74, 25, 36, 91, 10];
-let valeur = 145;
+let valeur = 45;
 
 // 1ere solution
 // if (recherche(nbTab, valeur) === false) {

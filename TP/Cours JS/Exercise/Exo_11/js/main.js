@@ -10,7 +10,7 @@ let maxNb = maxi(tabNb); // Enregistrement de la fonction.
 document.write(`La valeur max est ${maxNb}<br>=======================<br>`); // Affichage sur le body du nombre max.
 
 
-let nbMax = tabNb[0]; // Variable mise a 0.
+let nbMax = tabNb[0]; // On se met a la premiére position dans le tableau.
 
 for (let i = 1; i < tabNb.length; i++) { // Pour i = 1 ; tant que i est inf à la longueur du tab; incrémentation de i.
     if (tabNb[i] > nbMax) { // Si tabNb[i] est sup nbMax.
@@ -21,7 +21,7 @@ for (let i = 1; i < tabNb.length; i++) { // Pour i = 1 ; tant que i est inf à l
 document.write(`La valeur max est ${nbMax}<br>=======================<br>`); // Affichage sur le body du nombre max.
 
 function maxI(tabNb) {
-    let nbMaxi = tabNb[0]; // Variable mise a 0.
+    let nbMaxi = tabNb[0]; // On se met a la premiére position dans le tableau.
     for (let i = 1; i < tabNb.length; i++) { // Pour i = 1 ; tant que i est inf à la longueur du tab; incrémentation de i.
         if (tabNb[i] > nbMaxi) { // Si tabNb[i] est sup nbMaxi.
             nbMaxi = tabNb[i]; // alors on écrase la valeur de i jusqua ce que la plus grande valeur soit atteinte.
