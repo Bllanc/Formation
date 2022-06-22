@@ -14,8 +14,10 @@ function maxI(tabNb) {
         }
     };
     return [nbMaxi, nbMin]; // Retour sous forme de tableau
+    //return {nbMaxi,nbMin} // Retour sous forme d'objet
 };
-let [nbMaxi, nbMin] = maxI(tabNb);;
+let [nbMaxi, nbMin] = maxI(tabNb);
+//let { nbMaxi, nbMin } = maxI(tabNb);
 document.write(`La valeur min est ${nbMin} est la valeur max est ${nbMaxi}<br>=======================<br>`); // Affichage sur le body du nombre min et max.
 
 
