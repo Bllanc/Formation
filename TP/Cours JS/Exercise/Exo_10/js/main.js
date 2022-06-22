@@ -21,7 +21,7 @@ function verif() {
 document.write(`<br><br>Version de Rayen : <br><br> `);
 
 function recherche(tab, val) {
-    for (let i = 0; i <= tab.length; i++) {
+    for (let i = 0; i < tab.length; i++) {
         if (tab[i] == val) {
             return i + 1;
         }
