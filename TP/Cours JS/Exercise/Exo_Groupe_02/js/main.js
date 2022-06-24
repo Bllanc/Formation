@@ -38,35 +38,36 @@ function recherche(tabvehicules) {
         };
     }));
     moyenne = somme / tabvehicules.length;
-    return { puissanceMax, puissanceMin, marquePuissanceMax, marquePuissanceMin, moyenne, somme }; // retour de chaque valeur enregistrer
+    return { puissanceMax, puissanceMin, marquePuissanceMax, marquePuissanceMin, moyenne, somme }; // Retour de chaque valeur enregistrer
 };
 
 let { puissanceMax, puissanceMin, marquePuissanceMax, marquePuissanceMin, moyenne, somme } = recherche(vehicules);
+
 document.write(`<table>
-<tr>
-<td></td>
-<td>Marque</td>
-<td>Puissance</td>
-</tr>
-<tr>
-<td>La plus Puissante</td>
-<td>${marquePuissanceMax}</td>
-<td>${puissanceMax}</td>
-</tr>
-<tr>
-<td>La moins Puissante</td>
-<td>${marquePuissanceMin}</td>
-<td>${puissanceMin}</td>
-</tr>
-<tr>
-<td>Moyenne des Puissances</td>
-<td colspan="2">${moyenne}</td>
-</tr>
-<tr>
-<td>Somme des Puissances</td>
-<td colspan="2">${somme}</td>
-</tr>
-</table>`)
+                    <tr>
+                        <td></td>
+                        <td>Marque</td>
+                        <td>Puissance</td>
+                    </tr>
+                    <tr>
+                        <td>La plus Puissante</td>
+                        <td>${marquePuissanceMax}</td>
+                        <td>${puissanceMax}</td>
+                    </tr>
+                    <tr>
+                        <td>La moins Puissante</td>
+                        <td>${marquePuissanceMin}</td>
+                        <td>${puissanceMin}</td>
+                    </tr>
+                    <tr>
+                        <td>Moyenne des Puissances</td>
+                        <td colspan="2">${moyenne}</td>
+                    </tr>
+                    <tr>
+                        <td>Somme des Puissances</td>
+                        <td colspan="2">${somme}</td>
+                    </tr>
+                </table>`)
 
 // document.getElementById("ph").innerHTML = (puissanceMax); // Affichage dans le tableau 
 // document.getElementById("mh").innerHTML = (marquePuissanceMax); // Affichage dans le tableau 
@@ -74,7 +75,6 @@ document.write(`<table>
 // document.getElementById("mb").innerHTML = (marquePuissanceMin); // Affichage dans le tableau 
 // document.getElementById("moy").innerHTML = (moyenne); // Affichage dans le tableau 
 // document.getElementById("som").innerHTML = (somme); // Affichage dans le tableau 
-
 
 /*
 Lecture de l'énoncé
