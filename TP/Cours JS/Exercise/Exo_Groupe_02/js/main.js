@@ -15,53 +15,40 @@ const vehicules = [
 
 ]
 
-
 function recherche(tabvehicules) {
     let moyenne = 0;
     let somme = 0
     let puissanceMax = 0;
     let puissanceMin = 0;
-    let marquepuissanceMax = "";
-    let marquepuissanceMin = "";
-
+    let marquePuissanceMax = "";
+    let marquePuissanceMin = "";
     tabvehicules.map(((vehicule) => { // MAP pour pacourir la variable vehicules
-        somme = moyenne + vehicule.puissance // Calcul de la puissance Total // Ajoute chaque puissance de chaque vehicule
-        moyenne = somme
+        somme = somme + vehicule.puissance // Calcul de la puissance Total // Ajoute chaque puissance de chaque vehicule
+
         if (vehicule.puissance > puissanceMax) { // Si vehicule.puissance et sup a la valeur puissanceMax
             puissanceMax = vehicule.puissance; // J'écrase la valeur pour la remplacer par la plus haute valeur
-            marquepuissanceMax = vehicule.marque // Je récupere la marque en même temps que la plus haute valeur
+            marquePuissanceMax = vehicule.marque // Je récupere la marque en même temps que la plus haute valeur
         };
         if (vehicule.puissance < puissanceMin) { // Si vehicule.puissance et inf a la valeur puissanceMin
             puissanceMin = vehicule.puissance; //J'écrase la valeur pour la remplacer par la plus petite valeur
-            marquepuissanceMin = vehicule.marque // Je récupere la marque en même temps que la plus petite valeur
+            marquePuissanceMin = vehicule.marque // Je récupere la marque en même temps que la plus petite valeur
         };
         if (puissanceMin == 0) { // Prendre la premiére valeur par défaut
             puissanceMin = vehicule.puissance;
         };
-
     }));
     moyenne = somme / tabvehicules.length;
-    return { puissanceMax, puissanceMin, marquepuissanceMax, marquepuissanceMin, moyenne, somme }; // retour de chaque valeur enregistrer
+    return { puissanceMax, puissanceMin, marquePuissanceMax, marquePuissanceMin, moyenne, somme }; // retour de chaque valeur enregistrer
 };
 
-// let max = recherche(vehicules).puissanceMax;
-// let marquemax = recherche(vehicules).marquepuissanceMax;
+let { puissanceMax, puissanceMin, marquePuissanceMax, marquePuissanceMin, moyenne, somme } = recherche(vehicules);
 
-// let min = recherche(vehicules).puissanceMin;
-// let marquemin = recherche(vehicules).marquepuissanceMin;
-
-// let moyen = recherche(vehicules).moyenne;
-// let somme = recherche(vehicules).somme;
-
-
-document.getElementById("ph").innerHTML = (recherche(vehicules).puissanceMax); // Affichage dans le tableau 
-document.getElementById("mh").innerHTML = (recherche(vehicules).marquepuissanceMax); // Affichage dans le tableau 
-
-document.getElementById("pb").innerHTML = (recherche(vehicules).puissanceMin); // Affichage dans le tableau 
-document.getElementById("mb").innerHTML = (recherche(vehicules).marquepuissanceMin); // Affichage dans le tableau 
-
-document.getElementById("moy").innerHTML = (recherche(vehicules).moyenne); // Affichage dans le tableau 
-document.getElementById("som").innerHTML = (recherche(vehicules).somme); // Affichage dans le tableau 
+document.getElementById("ph").innerHTML = (puissanceMax); // Affichage dans le tableau 
+document.getElementById("mh").innerHTML = (marquePuissanceMax); // Affichage dans le tableau 
+document.getElementById("pb").innerHTML = (puissanceMin); // Affichage dans le tableau 
+document.getElementById("mb").innerHTML = (marquePuissanceMin); // Affichage dans le tableau 
+document.getElementById("moy").innerHTML = (moyenne); // Affichage dans le tableau 
+document.getElementById("som").innerHTML = (somme); // Affichage dans le tableau 
 
 
 /*
