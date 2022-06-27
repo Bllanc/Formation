@@ -14,6 +14,28 @@ function multiplication() {
 }
 multiplication();
 
+document.write(`========================================================================================================`);
+
+function multiplication2() {
+    let html = ``;
+    html += `<table>`;
+    for (let i = 1; i <= 10; i++) {
+        html += `<tr>`;
+        for (let j = 1; j <= 10; j++) {
+            html += `<td>${i * j}</td>`;
+        }
+        html += `</tr>`;
+    }
+
+    html += `</table>`;
+    //console.log(html);
+    return html;
+}
+
+document.write(multiplication2());
+
+
+
 
 /*
 Lecture de l'énoncé
