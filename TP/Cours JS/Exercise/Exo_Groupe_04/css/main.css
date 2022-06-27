@@ -29,6 +29,6 @@ td:hover {
 tr:first-child,
 tr td:first-child {
     background: lightblue !important;
-    padding: 1%;
+    padding: 1.5%;
     font-weight: bold;
 }
