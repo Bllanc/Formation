@@ -1,0 +1,34 @@
+body {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td {
+    width: 90px;
+    height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+
+td:hover {
+    color: #C60800;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+    background: black;
+    border-radius: 10%;
+}
+
+tr:first-child,
+tr td:first-child {
+    background: lightblue !important;
+    padding: 1%;
+    font-weight: bold;
+}
