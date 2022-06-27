@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+pre {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+table,
+tr,
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    padding: 1%;
+}
