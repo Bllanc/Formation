@@ -8,23 +8,12 @@
 
 // document.write(`${nbHM(70).h} heures et ${nbHM(70).m}minutes `);
 
-
 function nbHM(mn) {
     return [parseInt(mn / 60), mn % 60, parseInt(mn / 3600)];
 }
 let [h, m, s] = nbHM(8290);
 
 document.write(`${h} heures et ${m} minutes  et ${s} secondes`);
-
-
-
-
-
-
-
-
-
-
 
 /*
 Lecture de l'énoncé
