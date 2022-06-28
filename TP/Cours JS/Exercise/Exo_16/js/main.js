@@ -1,4 +1,4 @@
-// Afficher le tableau de contact en tableau HTMl et en comptant le nombre de contact
+// ecrire une fonction qui retourne tous les numéros de téléphones des contacts  en reprenant la structure de l'exemple d'avant
 contacts = [
     { id: 1, nom: "Julien", tel: "0623536587" },
     { id: 2, nom: "Oussama", tel: "0736521498" },
@@ -16,58 +16,20 @@ function affichage(tabcontatcs) {
     let html = ``;
     html += `<table>
                 <tr>
-                    <th>ID</th>
-                    <th>Nom</th>
                     <th>Tél</th>
                 </tr>`;
     tabcontatcs.map((contact) => {
         html += `
                         <tr>
-                            <td>${contact.id}</td> 
-                            <td>${contact.nom}</td>
                             <td>${contact.tel}</td>
                         </tr>
                     `;
     });
-    html += `   <tr>
-                    <td>Nombres de contact</td>
-                    <td colspan="2">${tabcontatcs.length}</td>
-                </tr>
-            </table>`;
+    html += `</table>`;
     return html
 };
 
 document.write(affichage(contacts));
-
-document.write(`<br /> <p style="margin-left:5%";> === Deuxiéme Solution Possible === </p> <br />`);
-
-function afficheContacts(contactsTab) {
-    let html = ``;
-
-    html += `<table border="1" cellspacing="5" cellpadding="5">
-                <tr>
-                  <th>ID</th>
-                  <th>Nom</th>
-                  <th>Tel</th>
-                </tr>
-            `;
-    for (let i = 0; i < contactsTab.length; i++) {
-        html += `
-        <tr> 
-          <td> ${contactsTab[i].id}</td>
-          <td>  ${contactsTab[i].nom}</td>
-          <td>  ${contactsTab[i].tel}</td>
-        </tr>
-      `;
-    }
-    html += `<tr>
-                <td>nb contacts</td>
-                <td colspan="2">${contactsTab.length}</td>
-            </tr>
-        </table>`;
-    return html;
-}
-document.write(afficheContacts(contacts));
 
 
 
