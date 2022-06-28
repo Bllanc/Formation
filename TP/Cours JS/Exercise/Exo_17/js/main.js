@@ -15,7 +15,7 @@ const contacts = [
 
 function affichage(tabcontatcs) {
     let html = ``;
-    tabcontatcs.filter(contact => contact.tel.substring(0, 2) == "06").map((contact) => { // Filtrage sur tabcontacts on découpe le numéro de tel pour recup les 2 premier chiffre et on regarde si ils sont égal à "06"; // On boucle sur le nouveaux tableau crée par filter
+    tabcontatcs.filter(contact => contact.tel.substring(1, 2) === "6").map((contact) => { // Filtrage sur tabcontacts on découpe le numéro de tel pour recup les 2 premier chiffre et on regarde si ils sont égal à "06"; // On boucle sur le nouveaux tableau crée par filter
         html += `<p>
                     ${contact.nom}  à un numéro de téléphone commencent par 06 ( ${contact.tel} ). 
                 </p>
@@ -24,8 +24,6 @@ function affichage(tabcontatcs) {
     return html
 };
 document.write(affichage(contacts));
-
-
 
 /*
 Lecture de l'énoncé
