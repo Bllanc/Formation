@@ -21,6 +21,8 @@ section {
     background-image: url(../res/img/parchemin.png);
     background-repeat: no-repeat;
     background-size: cover;
+    flex-grow: row wrap;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.95);
 }
 
 a {
@@ -112,4 +114,12 @@ h6 {
     transform: scale(1.2);
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+}
+
+#formu {
+    text-align: center;
+    width: fit-content;
+    font-weight: bold;
+    margin: 2% auto;
+    border-radius: 50%;
 }

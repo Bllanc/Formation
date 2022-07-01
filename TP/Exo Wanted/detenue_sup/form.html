@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/form.css'>
+    <link rel="icon" href="../res/img/favicon.ico" />
+    <title>WANTED</title>
+</head>
+
+<body>
+    <div>
+        <a href="../index.html">
+            <h1>CENTRE PENITENCIER DE LA CONTRE DE CHESTERFIELD</h1>
+        </a>
+        <div id="garde">
+            <img src="../res/img/marc.png" alt="">
+            <p>Gardien : Marc</p>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <div id="renseignement">
+                <p>A Saisir:</p>
+                <h6>* champ obligaoire</h6>
+                <form action="#">
+
+                    <label for="nom">*Nom : </label>
+                    <input type="text" placeholder="Jean" required="required">
+                    <label for="prenom">*Prénom : </label>
+                    <input type="text" placeholder="Bonbeurre" required="required">
+                    <br><br>
+                    <label for="photo">*Photo du détenue</label>
+                    <br>
+                    <input type="file" required="required">
+                    <br><br>
+                    <label for="crime">*Crimes engendré :</label>
+                    <input type="text" placeholder="Méfait" required="required">
+                    <br><br>
+                    <label for="win">*Récompense : </label>
+                    <input type="text" placeholder="Un paquet de chocobon" required="required">
+                    <br><br>
+                    <label for="comp1">Complice : </label>
+                    <input type="text">
+                    <br><br>
+                    <label for="comp2">Complice : </label>
+                    <input type="text">
+                    <br><br>
+                    <label for="capturer">Capturer : </label>
+                    <div id="capture">
+                        <div> <input type="radio" id="mort" name="cap" value="mort" checked>
+                            <label for="mort">Mort</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="vif" name="cap" value="vif">
+                            <label for="vif">Vif</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="m_v" name="cap" value="m_v">
+                            <label for="m_v">Mort ou Vif</label>
+                        </div>
+                    </div>
+                    <div id="envoie">
+                        <input type="submit" value="Crée l'avis de recherche">
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
