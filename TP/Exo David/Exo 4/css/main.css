@@ -9,16 +9,6 @@ body {
     font-family: 'Trispace', sans-serif;
 }
 
-#fond {
-    position: absolute;
-    width: 100%;
-    height: 800px;
-    z-index: -1;
-    background-image: url(../res/img/deux.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 header {
     text-align: center;
     background: rgba(86, 5, 86, 0.508);
@@ -154,8 +144,8 @@ footer a:hover {
         font-size: 18px;
     }
     #log1 {
-        width: 120px;
-        height: 70px;
+        width: 150px;
+        height: 20px;
     }
     #log2 {
         display: none;
