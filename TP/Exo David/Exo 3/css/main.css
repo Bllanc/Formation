@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+div {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 2%;
+    border-radius: 8%
+}
+
+#c1 {
+    color: red;
+}
+
+#c2 {
+    color: green
+}
+
+#c3 {
+    color: blue;
+}
+
+#c4 {
+    color: magenta
+}
+
+#c5 {
+    color: purple
+}
+
+#c6 {
+    color: rgb(96, 96, 44)
+}
