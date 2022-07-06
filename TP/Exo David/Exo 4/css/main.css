@@ -21,10 +21,16 @@ body {
 
 header {
     text-align: center;
-    background: rgb(86, 5, 86);
+    background: rgba(86, 5, 86, 0.508);
     color: white;
     padding: 2%;
     border-bottom: 1px solid grey;
+}
+
+span {
+    font-style: italic;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 #log1 {
@@ -111,7 +117,7 @@ img {
 footer {
     padding: 20px;
     grid-column: span 3;
-    background: rgb(86, 5, 86);
+    background: rgba(86, 5, 86, 0.508);
     color: #fff;
     padding-top: 1%;
     text-align: center;
