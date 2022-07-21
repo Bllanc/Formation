@@ -1,0 +1,82 @@
+li {
+    list-style-type: none;
+}
+
+header {
+    border-bottom: 25px solid #36C4B3;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.8s ease-in-out;
+}
+
+nav a:hover {
+    color: #36C4B3;
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.f-1 {
+    background: #36c4b488;
+}
+
+article form {
+    border: 5px solid gray;
+    border-radius: 8px;
+    background: white;
+}
+
+.bt-formred {
+    background: red;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+.bt-form {
+    background: #36C4B3;
+    color: white;
+    border-radius: 8px;
+    border: none;
+}
+
+#offre article {
+    transition: all 0.8s ease-in-out;
+}
+
+#offre p {
+    background: #36c4b488;
+    font-size: 25px;
+}
+
+#offre article:hover {
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+.logo img {
+    transition: all 0.8s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: all 0.8s ease-in-out;
+    cursor: pointer;
+}
+
+#faq {
+    background: #36c4b488;
+}
+
+.accordion-button {
+    background: #36C4B3 !important;
+    color: white !important;
+}
+
+footer {
+    border-top: 25px solid #36C4B3;
+}

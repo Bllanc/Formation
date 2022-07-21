@@ -1,0 +1,11 @@
+[class^="col"] {
+    background-color: lightblue;
+    min-height: 100px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+[class^="col"]:nth-child(odd) {
+    background-color: LightSkyBlue;
+    text-align: center;
+}

@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1%;
+}
+
+.flag {
+    margin: 1%;
+}
+
+.vert {
+    background-color: #008850;
+    min-height: 400px;
+}
+
+.jaune {
+    background-color: #FCD20F;
+    min-height: 200px;
+}
+
+.rouge {
+    background-color: #E90929;
+    min-height: 200px;
+}
+
+.red {
+    background-color: #E90929;
+    min-height: 300px;
+}
+
+.green {
+    background-color: #006A4D;
+    min-height: 100px;
+}
+
+.yellow {
+    background-color: #FFCF00;
+    min-height: 100px;
+}
+
+.gr {
+    background-color: #128B00;
+    min-height: 200px;
+}
+
+.rd {
+    background-color: #DF1A07;
+    min-height: 250px;
+    ;
+}
+
+.black {
+    background-color: #000000;
+    min-height: 250px;
+    ;
+}
+
+.orange {
+    background-color: #EF7E00;
+    min-height: 250px;
+    ;
+}
+
+.roug {
+    background-color: red;
+    min-height: 300px;
+}
+
+.white {
+    background-color: white;
+    min-height: 100px;
+}
+
+.bl {
+    background-color: #000000;
+    min-height: 100px;
+}
+
+.ble {
+    background-color: #21428E;
+    min-height: 200px;
+}
+
+.whi {
+    background-color: white;
+    min-height: 125px;
+}
+
+.cheat {
+    direction: rtl;
+}

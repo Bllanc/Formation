@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+div {
+    margin: 10px 0 10px 0;
+}
+
+.orange {
+    background-color: #E54C21;
+}
+
+.blue {
+    background-color: #214CE5;
+}
+
+.purple {
+    background-color: #7431F9;
+}
+
+.orange,
+.blue,
+.purple {
+    color: white;
+}

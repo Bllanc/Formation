@@ -1,0 +1,17 @@
+[class*="col-"] {
+    background-color: #d4d4d4;
+    border: 2px solid #000000;
+    line-height: 50px;
+    text-align: center;
+}
+
+.row {
+    background-color: rgb(253, 255, 127);
+}
+
+.container,
+.container-fluid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgb(237, 219, 253);
+}

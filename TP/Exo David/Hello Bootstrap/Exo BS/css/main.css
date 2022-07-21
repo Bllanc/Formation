@@ -1,0 +1,25 @@
+span {
+    display: inline-block;
+    min-height: 400px;
+    min-width: 400px;
+}
+
+.bleu {
+    background: rgba(0, 0, 255, 0.626);
+}
+
+.rouge {
+    background: rgba(255, 0, 0, 0.663);
+}
+
+.vert {
+    background: rgba(0, 128, 0, 0.658);
+}
+
+.jaune {
+    background: rgba(255, 255, 0, 0.587);
+}
+
+.bc {
+    background: rgba(64, 224, 208, 0.644);
+}
