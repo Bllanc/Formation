@@ -81,6 +81,7 @@ article form {
 .accordion-button {
     background: #36C4B3 !important;
     color: white !important;
+    font-weight: bold;
 }
 
 footer {
