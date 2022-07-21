@@ -14,7 +14,7 @@ les liens, petits logos (voiture, camion ...) et toutes "Card" doivent grossir s
 
 tout displays (flexbox, grid ...) doit etre obligatoirement inséré avec bootstrap
 
-La FAQ doit etre uneaccordéon fonctionnel (voire doc bootstrap)
+La FAQ doit etre un accordéon fonctionnel (voire doc bootstrap)
 
 les liens du footer n'ont pas de direction
 
