@@ -6,6 +6,12 @@ header {
     border-bottom: 25px solid #36C4B3;
 }
 
+.res input {
+    background: rgb(176, 170, 170);
+    color: white;
+    ;
+}
+
 nav a {
     text-decoration: none;
     color: black;
@@ -24,7 +30,7 @@ nav a:hover {
 }
 
 article form {
-    border: 5px solid gray;
+    border: 5px solid rgb(188, 182, 182);
     border-radius: 8px;
     background: white;
 }
@@ -37,8 +43,8 @@ article form {
 }
 
 .bt-form {
-    background: #36C4B3;
-    color: white;
+    background: #36C4B3 !important;
+    color: white !important;
     border-radius: 8px;
     border: none;
 }
