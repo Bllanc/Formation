@@ -1,0 +1,92 @@
+Exo3.4
+
+Ecrire "Entrer un chifre"
+Lire chiffre
+Si chiffre  >= 0
+Ecrire " Positif"   
+Sinon 
+Ecrire "Négatif"
+
+Exo 3.5
+
+Ecrire "Entrer un chifre"
+Lire chiffre
+Si chiffre  >= 0
+Ecrire " Positif"  
+Sinon si chiffre == 0 
+Ecrire "Nul"
+Sinon 
+Ecrire "Négatif"
+
+Exo 3.6
+
+Ecrire "Entrez votre age "
+Lire Age
+Si Age ==6 || ==7
+Ecrire "Poussin"
+Sinon Si Age == 8 || ==9
+Ecrire "Pupille"
+Sinon Si Age == 10 || == 11
+Ecrire "Minime"
+Sinon Si >= 12
+Ecrire "Cadet"
+Sinon 
+Ecrire "Non Catégorisé"
+
+Exo 
+
+Jeune <- <50
+Vieux <- >50
+Mineur <- <18
+Majeur <- >18 
+
+Ecrire "Entrez votre age"
+Lire Age 
+Si Age < 12
+Ecrire "Jeune Enfant Mineur"
+Sinon Si Age >=12 && Age <= 17
+Ecrire "Jeune Adolescent Mineur"
+Sinon Si Age >=18 && Age <=50
+Ecrire "Jeune Adulte Majeur"
+Sinon 
+Ecrire "Vieux Adulte Majeur"
+
+Exo 
+
+TANT QUE continuer = vrai FAIRE
+Ecrire "Donnez moi 2 chiffres je vous dirait qui est le plus grand"
+Lire Chiffre 1
+Lire Chiffre 2
+Si Chiffre 1 est > Chiffre 2
+Ecrire "Le chiffre le plus grand est Chiffre 1 "
+Sinon si Chiffre 2 est > Chiffre 1
+Ecrire "Le chiffre le plus grand est Chiffre 2 "
+Sinon
+Ecrire "Chiffre 1 est Chiffre 2 sont les mêmes"
+Ecrire "Voulez-vous continuer ?"
+Lire continuer
+Fin TANT QUE
+
+Exo Juste Prix 
+
+
+Debut
+
+Essais ← 10
+
+Pour i = 0 à 10 FAIRE
+Ecrire "Nombre du J1 : "
+Lire Nb-1
+Ecrire "Proposition du j2 :"
+Lire Nb-2
+Si Nb-2 est < au Nb-1
+ecrire Essais -1 
+Ecrire "C'est plus"
+Sinon si Nb-2 est > au Nb-1
+ecrire Essais -1
+Ecrire "C'est moins"
+Sinon si Essais = 0 "Tu as perdu, veux tu recommencer ?"
+Sinon Nb-2 = Nb-1
+Ecrire "Félicitation, veux tu recommencer ?"
+fin si
+Fin
