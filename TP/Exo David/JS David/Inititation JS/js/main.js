@@ -241,3 +241,74 @@ let garage = [
   },
 ];
 console.table([garage]);
+
+// alert("MAAAAAAAAAAAAAAAAAAARC !")
+
+//   prenom = prompt("Quel est votre prénom ?")
+//   console.log(prenom);
+
+/** EXO
+ * Demander le prénom et l'age de l'utilisateur et afficher une alert "Bonjour BoB vous avez XX ans"
+ */
+// prenom = prompt("Indiquer votre prénom");
+// age = prompt("Indiquer votre age");
+// alert(`Bonjour ${prenom} vous avez ${age}ans`);
+
+/*
+ * Les Fontions
+ */
+
+//Lorsque les parenthéses d'une fonction sont vides cela signifie qu'elle ne prend pas de paramètre
+function hello() {
+  alert("Hello, world");
+}
+// hello();
+
+function bonjour(prenom) {
+  alert(`Bonjour ${prenom}`);
+}
+// bonjour("Patrick");
+
+/*
+Exercice
+1/ Ecrire une fonction permettant d'effectuer le calcul du perimetre d'un rectangle
+Indice : l'équivalent de l'instruction Retourner vue en Algo est l'instruction return en JS
+
+2/ Demander à l'utilisateur de saisir la longueur et la largeur
+
+3/ Appeler la fonction précédemment créée avec les valeurs saisies par l'utilisateur
+
+4/ Afficher le résultat dans la console
+*/
+// function perimetre() {
+//   let longueur = Number(prompt("Quelle est la longueur ?"));
+//   let largeur = Number(prompt("Quelle est la largueur ?"));
+//   resultat = (longueur + largeur)*2;
+//   console.log(`Le périmetre de cet endroit est de ${resultat}m²`);
+// }
+// perimetre();
+
+/** EXO
+ * Commande MacDo
+ * Simuler une commande  au Drive :
+ *
+ * On réutiliseras les burgers que vous avez fait précedemment
+ * I - Ecrire une fonction qui demande :
+ *      -type de Burger
+ *      -accompagnement : Frites, Potatoes, Batonnets de Carottes
+ *      -boissons : Coca, Fanta, Minute Maid ou Evian
+ *      -dessert : McFlurry,Sundae, Donut
+ *
+ * II - Stocker le tous dans un tableau  et Afficher le résultat.
+ */
+
+function drive() {
+  alert(`Bonjour et bienvenue chez MacDo`);
+  burger = prompt(`Quel hamburger desirez-vous ?`);
+  let accompagnement = prompt(`Frites ,Potatoes,Carottes ?`);
+  let boissons = prompt(`Vous desirez une boisson ?`);
+  let dessert = prompt(`Une petite douçeur pour faire passer le tout ?`);
+  let commande = [burger, accompagnement, boissons, dessert];
+  console.log(`Votre commande se compose de ${commande} et feras 15.00€ au prochain guichet.Merci !`);
+}
+drive();
