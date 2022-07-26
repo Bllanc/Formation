@@ -114,3 +114,130 @@ console.table(legumes);
 
 //Recupérer la taille d'un tableau
 console.log(legumes.length);
+
+//Ajouter un élménent au tableau push()
+legumes.push("Poireau"); // Ajoute 1 élément
+legumes.push("Courgette", "Potiron", "Aubergine");
+console.table(legumes);
+
+// Ajoute à la fin du tableau pop()
+legumes.pop();
+console.table(legumes);
+
+// Supprimer le 1er element du tableau shift()
+legumes.shift();
+console.table(legumes);
+
+// Ajout au debut du tableau unshift()
+legumes.unshift("Endive");
+console.table(legumes);
+
+// La méthode splice() va nous permettre de retirer un ou plusieurs éléments d'un tableau à une possition donnée
+//tableau.splice(positionDeDemarrage,nbASupprimer)
+legumes.splice(2, 2);
+console.table(legumes);
+
+//Nous pouvons aussi ajouter des éléments a une position donnée avec la méthode splice()
+legumes.splice(1, 0, "Cornichon");
+console.table(legumes);
+
+/* EXO BURGER
+On créer un Burger classique 
+I - Crée et Afficher ce burger  
+II - Enlever les ingédients pour une version Végétarienne, remplacer le steak par un steak Végétale
+III - Faire une version Végan
+IV - Faire une version Carnivore Supplément 4 steaks
+V - Inventer votre formule personnaliser
+*/
+
+let burger = [
+  "Pain",
+  "Salade",
+  "Cornichon",
+  "Cheddar",
+  "Steak",
+  "Tomate",
+  "Moutarde",
+  "Ketchup",
+];
+console.table(burger);
+// II
+burger[4] = "Steak Végétale";
+console.table(burger);
+// III
+burger.splice(3, 1);
+console.table(burger);
+//IV
+burger[3] = "Steak";
+burger.splice(4, 0, "Steak");
+burger.splice(4, 0, "Steak");
+burger.splice(4, 0, "Steak");
+burger.splice(1, 1);
+burger.splice(1, 1);
+burger.splice(5, 1);
+console.table(burger);
+//V
+burger.splice(1, 0, "Salade");
+burger.splice(2, 0, "Cornichon");
+burger.splice(4, 0, "Bacon");
+burger.splice(6, 0, "Bacon");
+burger.splice(8, 0, "Bacon");
+burger.splice(3, 0, "Cheddar");
+burger.splice(11, 0, "Cheddar");
+burger.splice(3, 0, "Oignon Frit");
+console.table(burger);
+
+// Objets
+
+let personne = { nom: "Averlan", prenom: "Allan", age: 26 };
+console.table(personne);
+console.table(personne.prenom);
+personne.prenom = "John";
+console.table(personne);
+personne.voiture = "Renault";
+console.table(personne);
+
+/*EXO
+Créez une voiture avec une marque, un modéle, une couleur , un prix
+I - Afficher la voiture
+II - Changer sa couleur en noir ou blanc (selon la couleur d'origine de votre voiture)
+III  - Changer le prix (réduction de 25%)
+IV - Ajouter un propriétaire (juste son prénom)
+*/
+let voiture = {
+  marque: "Dodge",
+  modele: "Challenger 69",
+  coloris: "Grise bande Noir",
+  prix: 50000,
+};
+
+//I
+console.table([voiture]);
+
+// II
+voiture.coloris = "Noir bande Blanche";
+console.table([voiture]);
+
+//III
+let reduc = (voiture.prix / 100) * 25;
+voiture.prix = voiture.prix - reduc;
+console.table([voiture]);
+
+// IV
+voiture.proprietaire = "Allan";
+console.table([voiture]);
+
+/* GARAGE
+ Vous avez fait une voiture, maintenant faites en 3 nouvelles voitures et inégrez les dans un tableau qui s'appelle : garage
+ */
+let garage = [
+  { marque: "Hyundai", modele: "i-30", coloris: "gris", prix: 3750 },
+  { marque: "Fiat", modele: "Panda", coloris: "Blanche", prix: 500 },
+  {
+    marque: "Mustang",
+    modele: "Shelby GT 500 2022",
+    coloris: "Jaune",
+    prix: 75000,
+  },
+];
+console.table([garage]);
