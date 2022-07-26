@@ -90,3 +90,19 @@ Sinon Nb-2 = Nb-1
 Ecrire "Félicitation, veux tu recommencer ?"
 fin si
 Fin
+
+
+
+Exo fizz buzz
+
+POUR i ← 0 à 100 FAIRE
+Si i % 3 = 0 alors
+écrire "Fizz"
+Sinon si i % 5 = 0 alors
+écrire "Buzz"
+Sinon si i % 3 = 0 ET i % 5 = 0 alors
+écrire "FizzBuzz"
+Sinon
+Afficher i
+fin si
+fin boucle pour
