@@ -505,10 +505,77 @@ function readInfo(infos) {
  * Exercice
  * A partir du tableau numérique suivant :
  */
- let names = ["Jérome", "Valentin", "Yohann", "Emmanuel", "Marina","Allan","Dalian","Thierry","François"];
- /**
-  * Gràce à une boucle FOR, afficher la liste des prenoms du tableau*/
+//  let names = ["Jérome", "Valentin", "Yohann", "Emmanuel", "Marina","Allan","Dalian","Thierry","François"];
+//  /**
+//   * Gràce à une boucle FOR, afficher la liste des prenoms du tableau*/
 
- for (let i = 0; i < 1; i++) {
-console.table(`${names}`);
- }
+//  for (let i = 0; i < 1; i++) {
+// console.table(`${names}`);
+//  }
+
+// /****************
+//  * const
+//  */
+const nbMax = 6;
+//  nbMax = 7;
+
+const fruits = ["Pomme"];
+// fruits = ["Pomme", "Poire"]; // Syntax error
+fruits.push("Poire"); // Possible car on ne "touche" pas à la structure de la constante à savoir un tableau numérique
+
+/*****************
+ * .map
+ * .find
+ * .filter
+ */
+const vegetables = [
+
+  {
+    code: 11,
+    name: "Carotte",
+    price: 1.99,
+  },
+  {
+    code: 12,
+    name: "Poivron vert",
+    price: 2.99,
+  },
+  {
+    code: 13,
+    name: "Poivron rouge",
+    price: 2.99,
+  },
+  {
+    code: 14,
+    name: "Chou",
+    price: 3.99,
+  },
+  {
+    code: 15,
+    name: "Carotte Jaune",
+    price: 2.99,
+  },
+
+];
+
+//.map
+const list_vegetables = vegetables.map(function (vegetable) {
+  return `${vegetable.name} pour un prix de ${vegetable.price}`;
+});
+console.log(list_vegetables);
+
+// Trouver un élément --> .find
+// Ne récupére que un seul élément et le premier qu'il trouve avec le même nom
+
+const carotte = vegetables.find(function (vegetable) {
+  return vegetable.name.includes("Carotte Jaune");
+});
+console.log(carotte);
+
+
+// Trouver tout les éléments --> .filter
+
+const poivron = vegetables.filter(function (vegetable) {
+  return vegetable.name.includes("Poivron");
+});
+console.log(poivron);
