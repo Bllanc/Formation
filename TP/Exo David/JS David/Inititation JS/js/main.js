@@ -302,13 +302,180 @@ Indice : l'équivalent de l'instruction Retourner vue en Algo est l'instruction 
  * II - Stocker le tous dans un tableau  et Afficher le résultat.
  */
 
-function drive() {
-  alert(`Bonjour et bienvenue chez MacDo`);
-  burger = prompt(`Quel hamburger desirez-vous ?`);
-  let accompagnement = prompt(`Frites ,Potatoes,Carottes ?`);
-  let boissons = prompt(`Vous desirez une boisson ?`);
-  let dessert = prompt(`Une petite douçeur pour faire passer le tout ?`);
-  let commande = [burger, accompagnement, boissons, dessert];
-  console.log(`Votre commande se compose de ${commande} et feras 15.00€ au prochain guichet.Merci !`);
+function readInfo(infos) {
+  return prompt(`${infos}`);
 }
-drive();
+
+// function drive() {
+//   alert(`Bonjour et bienvenue chez MacDo`);
+//   burger = prompt(`Quel hamburger desirez-vous ?`);
+//   let accompagnement = prompt(`Frites ,Potatoes,Carottes ?`);
+//   let boissons = prompt(`Vous desirez une boisson ?`);
+//   let dessert = prompt(`Une petite douçeur pour faire passer le tout ?`);
+//   let commande = [burger, accompagnement, boissons, dessert];
+//   console.log(
+//     `Votre commande se compose de ${commande} et feras 15.00€ au prochain guichet.Merci !`
+//   );
+// }
+// drive();
+
+// age = Number(readInfo("Age"));
+// if (age >= 18) {
+//   alert(`Enjoy`);
+// } else {
+//   alert(`Bye,Bye`);
+//   window.location = "http://www.google.fr";
+// }
+
+/**********************************
+ * Les opérateurs de comparaison
+ *
+ *      == signifie égal à
+ *      Il permet de vérifier que la valeur de deux variables sont identiques
+ *
+ *      === signifie strictement égal à
+ *      Il va comparer la valeur ET le type de deux variables
+ *
+ *      != signifie différent de
+ *      Il permet de vérifier que la valeur de deux variables sont différentes
+ *
+ *      !== signifie strictement différent de
+ *      Il va vérifier si la valeur OU le type sont différents
+ *
+ * Exemples
+ *
+ * 1 == 1 --> vrai
+ * "1" == 1 --> vrai
+ * 1 != 2 --> vrai
+ * 1 != "1" --> faux
+ * 3 === 3 --> vrai
+ * 3 === "3" --> faux
+ * 3 !== "3" --> vrai
+ * 4 !== 3 --> vrai
+ * /
+ *
+ * * Nous disposons de deux variables email et mdp contenant respectivement l'email et le mot de passe pour accéder à un espace sécurisé
+ */
+// let email = "contact@teamcalais.fr";
+// let mdp = "leLundiAuSoleil";
+
+// /**
+//  * 1/ Demander à l'utilisateur de saisir un email et un mot de passe
+//  * 2/ Vérifier que l'email est identique à la variable email
+//  * 3/ Vérifier que le mot de passe est identique à la variable mdp
+//  * 4/ Si OK alors on affiche un message de bienvenue
+//  * 5/ Sinon on indique à l'utilisateur l'information incorrecte
+//  */
+
+// function connexion() {
+//   if (
+//     document.getElementById("mail").value == email &&
+//     document.getElementById("mdp").value == mdp
+//   ) {
+//     alert(`Bienvenue ${email}`);
+//   } else if (document.getElementById("mail").value != email) {
+//     alert(`Adresse mail Incorrect`);
+//   } else {
+//     alert(`Mot de passe Incorrect`);
+//   }
+// }
+
+/**
+ * EXO Quizz
+ * Poser 2 question à l'utilisateur:
+ * Si la premiére réponse est fausse ==> Perdu
+ * Puis i la deuxiéme réponse est fausse ==> Perdu
+ * Si il a bon aux 2 questions ==> Gagné
+ */
+
+/********************************
+ * Les opérateurs logiques
+ *
+ * L'opérateur ET : &&
+ *
+ * Exemple : Tester en même temps si l'email ET le mot de passe sont identiques
+ */
+// if (userEmail == email && userPwd == mdp) {
+// La condition sera remplie si et seulement si les deux tests donnent la valeur VRAI
+// Cf table de vérité
+//}
+
+// question1 = prompt("Qui a gagné la coupe du monde de football en 1998 ?");
+// question2 = prompt("Quel président était en exercice à ce moment là ?");
+
+// if (question1 === reponse1 && question2 === reponse2) {
+//   alert("Gagné");
+// } else {
+//   alert("Perdu");
+// }
+
+// let rep1 = "Palpatine";
+// let rep2 = "Ben";
+
+// function questionnaire() {
+//   let question1 = readInfo("Qui est le grand-pére de Rey Skywalker?");
+//   if (question1 == rep1) {
+//     let question2 = readInfo("Qui est le fils de Han Solo et de Leia Organa?");
+//     if (question2 == rep2) {
+//       alert("Winner");
+//     } else {
+//       alert("Looser");
+//     }
+//   } else {
+//     alert("Looser");
+//   }
+// }
+// questionnaire();
+
+// function questionnaire() {
+//   let question1 = readInfo("Qui est le grand-pére de Rey Skywalker?");
+//   let question2 = readInfo("Qui est le fils de Han Solo et de Leia Organa?");
+//   if (question1 != rep1 || question2 != rep2) {
+//     alert("Perdue");
+//   } else {
+//     alert("Winner");
+//   }
+// }
+// questionnaire();
+
+/****************************
+ * L'opérateur NON / CONTRAIRE DE : !F
+ */
+//  var pause = true;
+//  if (!pause) {
+//      console.log("Ce n'est pas l'heure de la pause !");
+//  }
+// équivalent à if(pause == false) { ... }
+// différent de
+//  if (pause) {
+//      console.log("C'est l'heure de la pause !");
+//  }
+// équivalent à if(pause == true) { ... }
+
+/****************************************************************
+ * Les Boucles
+ */
+
+// La boucle While : TANT Quel
+let i = 1;
+
+while (i <= 10) {
+  console.log(`Instruction while écécuté ${i}fois`);
+  i++;
+}
+
+/****************************************************************
+ * Demander a l'utilisateur de fermé le pont dans la boucle
+ * Une fois le pont fermé réponder Feu Orange Clignotant
+ */
+
+let pont = "Ouvert";
+
+while (pont == "Ouvert") {
+  console.log("Feu Rouge");
+  let ferme = readInfo("Le pont est il fermer ?");
+  if (ferme == "Oui" || "oui") {
+    alert("Feu Orange Clignotant");
+    pont = "Fermer";
+  }
+}

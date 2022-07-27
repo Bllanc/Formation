@@ -11,6 +11,7 @@ const contacts = [
     { id: 9, nom: "Joseph", tel: "0719752796" },
     { id: 10, nom: "Adama", tel: "0641354789" },
 ];
+console.log(contacts);
 
 
 function affichage(tabContacts) {
