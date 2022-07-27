@@ -457,25 +457,58 @@ function readInfo(infos) {
  */
 
 // La boucle While : TANT Quel
-let i = 1;
+// let i = 1;
 
-while (i <= 10) {
-  console.log(`Instruction while écécuté ${i}fois`);
-  i++;
-}
+// while (i <= 10) {
+//   console.log(`Instruction while écécuté ${i}fois`);
+//   i++;
+// }
 
-/****************************************************************
- * Demander a l'utilisateur de fermé le pont dans la boucle
- * Une fois le pont fermé réponder Feu Orange Clignotant
+// /****************************************************************
+//  * Demander a l'utilisateur de fermé le pont dans la boucle
+//  * Une fois le pont fermé réponder Feu Orange Clignotant
+//  */
+
+// let pont = "Ouvert";
+
+// while (pont == "Ouvert") {
+//   console.log("Feu Rouge");
+//   let fermePont = prompt("Voulez-vous fermer le pont ?");
+//   if (fermePont.toUpperCase() == "OUI") {
+//     alert("Feu Orange Clignotant");
+//     pont = "Fermer";
+//   }
+// }
+
+/**
+ * Vous avez une punition a faire :"Je doit participer plus en classe" à faire 100 fois.
  */
+// let nb = 1;
+// while (nb < 101) {
+//   document.write(`${nb} | Je doit participer plus en classe <br>`);
+//   nb++;
+// }
 
-let pont = "Ouvert";
+// // La boucle FAIRE ... TANT QUE : do...while
+// do {
+//   // A la différence de la boucle while les instructions d'un do while seront éxécutées au moins une fois
+//   console.log("Instruction do while exécutée " + i + " fois");
+//   i++;
+// } while (i <= 10);
 
-while (pont == "Ouvert") {
-  console.log("Feu Rouge");
-  let ferme = readInfo("Le pont est il fermer ?");
-  if (ferme == "Oui" || "oui") {
-    alert("Feu Orange Clignotant");
-    pont = "Fermer";
-  }
-}
+// //La boucle For : POUR de
+// for (let i = 0; i < 10; i++) {
+//   console.log(`Insctruction for exécuté ${i} fois`);
+// }
+
+/**
+ * Exercice
+ * A partir du tableau numérique suivant :
+ */
+ let names = ["Jérome", "Valentin", "Yohann", "Emmanuel", "Marina","Allan","Dalian","Thierry","François"];
+ /**
+  * Gràce à une boucle FOR, afficher la liste des prenoms du tableau*/
+
+ for (let i = 0; i < 1; i++) {
+console.table(`${names}`);
+ }
