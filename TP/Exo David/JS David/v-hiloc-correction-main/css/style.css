@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Hurricane";
+    src: url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("https://fonts.googleapis.com/css?family=Inter&display=swap");
+}
+
+body {
+    font-family: "Inter";
+}
+
+header>h1 {
+    font-family: "Hurricane";
+    font-size: 75px;
+}
+
+header {
+    border-bottom: 10px solid #36C4B3
+}
+
+.resa{
+    height: 600px;
+}
+
+.bg-vert-pale {
+    background-color: #36C4B340;
+}
+
+.bg-vert {
+    background: #36C4B3 !important;
+}
+
+.vehicle-btn-group-tiny img {
+    width: 15%;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav li:hover {
+    color: #36C4B3;
+}
+
+footer {
+    border-top: 10px solid #36C4B3
+}
+
+.vehicle-btn-group-tiny img:hover, .clio-card:hover, nav li:hover, article.m-5:hover, img.mx-4:hover {
+    transform: scale(1.1);
+}
