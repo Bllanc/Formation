@@ -901,3 +901,43 @@ data[2].appendChild(input);
 input.addEventListener("change", () => {
   alert(input.value);
 });
+
+/**
+ * querySelector
+ *
+ * Cette méthode, toujours sur l'objet document, retourne le premier élément dans le document HTML correspondant au sélecteur spécifié ou null si aucune correspondance n'est trouvée.
+ */
+let element = document.querySelector(".contenu");
+console.log(element);
+
+/*Cette méthode, toujours sur l'objet document, retourne tous éléments dans le document HTML correspondant au sélecteur spécifié ou null si aucune correspondance n'est trouvée.
+ */
+let elements = document.querySelectorAll(".contenu");
+
+console.log(elements);
+
+/**
+ * La méthode preventDefault sur l'objet event
+ *
+ * Elle va nous permettre d'indiquer que nous ne souhaitons pas que l'action par défaut soit prise en compte.
+ *
+ *
+ * La fonction de callback passée en paramètre d'addEventListener peut prendre un paramètre.
+ * Ce paramètre représente l'objet event.
+ * il est généralement nommé e, evt ou event
+ *
+ * La methode preventDefault de cet odjet récupéré en paramètre permet d'empêcher le navigateur de déclencher son comportement par défaut.
+ *
+ * Exemple: empêcher l'utilisateur d'allert sur Google au clic sur le lien portant l'id googleLink
+ */
+
+let googleLink = document.querySelector("#googleLink");
+googleLink.addEventListener("click", (e) => {
+  // annuler le comportement par défaut
+  e.preventDefault();
+
+  alert("VOUS NE PASSSEREZ PAS !");
+
+  console.log(e.target);
+  console.log(e.target.classList);
+});
