@@ -516,66 +516,388 @@ function readInfo(infos) {
 // /****************
 //  * const
 //  */
-const nbMax = 6;
-//  nbMax = 7;
+// const nbMax = 6;
+// //  nbMax = 7;
 
-const fruits = ["Pomme"];
-// fruits = ["Pomme", "Poire"]; // Syntax error
-fruits.push("Poire"); // Possible car on ne "touche" pas à la structure de la constante à savoir un tableau numérique
+// const fruits = ["Pomme"];
+// // fruits = ["Pomme", "Poire"]; // Syntax error
+// fruits.push("Poire"); // Possible car on ne "touche" pas à la structure de la constante à savoir un tableau numérique
 
-/*****************
- * .map
- * .find
- * .filter
- */
-const vegetables = [
+// /*****************
+//  * .map
+//  * .find
+//  * .filter
+//  */
+// const vegetables = [
+//   {
+//     code: 11,
+//     name: "Carotte",
+//     price: 1.99,
+//   },
+//   {
+//     code: 12,
+//     name: "Poivron vert",
+//     price: 2.99,
+//   },
+//   {
+//     code: 13,
+//     name: "Poivron rouge",
+//     price: 2.99,
+//   },
+//   {
+//     code: 14,
+//     name: "Chou",
+//     price: 3.99,
+//   },
+//   {
+//     code: 15,
+//     name: "Carotte Jaune",
+//     price: 2.99,
+//   },
+// ];
 
-  {
-    code: 11,
-    name: "Carotte",
-    price: 1.99,
-  },
-  {
-    code: 12,
-    name: "Poivron vert",
-    price: 2.99,
-  },
-  {
-    code: 13,
-    name: "Poivron rouge",
-    price: 2.99,
-  },
-  {
-    code: 14,
-    name: "Chou",
-    price: 3.99,
-  },
-  {
-    code: 15,
-    name: "Carotte Jaune",
-    price: 2.99,
-  },
+// //.map
+// const list_vegetables = vegetables.map(function (vegetable) {
+//   return `${vegetable.name} pour un prix de ${vegetable.price}`;
+// });
+// console.log(list_vegetables);
 
+// // Trouver un élément --> .find
+// // Ne récupére que un seul élément et le premier qu'il trouve avec le même nom
+
+// const carotte = vegetables.find(function (vegetable) {
+//   return vegetable.name.includes("Carotte Jaune");
+// });
+// console.log(carotte);
+
+// // Trouver tout les éléments --> .filter
+
+// const poivron = vegetables.filter(function (vegetable) {
+//   return vegetable.name.includes("Poivron");
+// });
+// console.log(poivron);
+
+const dwwmCalais = [
+  {
+    prenom: "Allan",
+    lunettes: true,
+    sexe: "M",
+  },
+  {
+    prenom: "Dalian",
+    lunettes: true,
+    sexe: "M",
+  },
+  {
+    prenom: "Marina",
+    lunettes: true,
+    sexe: "F",
+  },
+  {
+    prenom: "Emmanuel",
+    lunettes: true,
+    sexe: "M",
+  },
+  {
+    prenom: "Yohan",
+    lunettes: false,
+    sexe: "M",
+  },
+  {
+    prenom: "Jérome",
+    lunettes: false,
+    sexe: "M",
+  },
+  {
+    prenom: "Valentin",
+    lunettes: false,
+    sexe: "M",
+  },
+  {
+    prenom: "Thierry",
+    lunettes: true,
+    sexe: "M",
+  },
+  {
+    prenom: "François",
+    lunettes: true,
+    sexe: "M",
+  },
+  {
+    prenom: "David",
+    lunettes: true,
+    sexe: "M",
+  },
 ];
 
-//.map
-const list_vegetables = vegetables.map(function (vegetable) {
-  return `${vegetable.name} pour un prix de ${vegetable.price}`;
+// I - Afficher les prénoms.
+// II - Trouver la personne de sexe Féminin .
+// III - Filtrer les personnes possédant des lunettes.
+// IV - Filtrer les personnes qui possédent "MA" dans leurs prenom.
+// V - Idem avec "AL".
+
+// I
+const list_dwwm = dwwmCalais.map(function (student) {
+  return student.prenom;
 });
-console.log(list_vegetables);
+console.table(list_dwwm);
 
-// Trouver un élément --> .find
-// Ne récupére que un seul élément et le premier qu'il trouve avec le même nom
-
-const carotte = vegetables.find(function (vegetable) {
-  return vegetable.name.includes("Carotte Jaune");
+// II
+const feminin = dwwmCalais.find(function (student) {
+  return student.sexe.includes("F");
 });
-console.log(carotte);
+console.table(feminin);
 
-
-// Trouver tout les éléments --> .filter
-
-const poivron = vegetables.filter(function (vegetable) {
-  return vegetable.name.includes("Poivron");
+// III
+const lunette = dwwmCalais.filter(function (student) {
+  return student.lunettes === true;
 });
-console.log(poivron);
+console.table(lunette);
+
+// IV
+const ma = dwwmCalais.filter(function (student) {
+  return student.prenom.toLowerCase().includes("ma");
+});
+console.table(ma);
+
+// V
+const al = dwwmCalais.filter(function (student) {
+  return student.prenom.toLowerCase().includes("al");
+});
+console.table(al);
+
+/****************************************************************
+ * Fonction féchée => function arrow
+ * Pour écrire une fonction fléchée nous allons utiliser un opérateur que l'on appelle fat arrow =>
+ */
+
+function addition(nb1, nb2) {
+  return nb1 + nb2;
+}
+
+const addition2 = function (nb1, nb2) {
+  return nb1 + nb2;
+};
+
+const addition3 = (nb1, nb2) => nb1 + nb2;
+const afficherNombre = (nb1) => console.log(nb1);
+
+afficherNombre(addition(2, 3));
+afficherNombre(addition2(5, 7));
+afficherNombre(addition3(8, 1));
+
+// Ternaire : ?
+
+let clim = false;
+
+if ((clim = false)) {
+  console.log("Oui");
+} else {
+  console.log("non");
+}
+
+// Equivalent avec une ternaire
+clim ? console.log("oui") : console.log("non");
+
+// Demandez à l'utilisateur son age : si il a moins de 18 ans affichez mineur sinon afficher majeur
+// function verif() {
+//   age = Number(prompt(`Qu'elle age avez-vous ?`));
+//   age < 18 ? console.log("Mineur") : console.log("Majeur");
+// }
+// verif();
+
+//Crée 2 fonction qui renvoie vers une autre page : la premiére destiné au mineur : PicWicToys
+// la deuxiéme  sur Winamax si majeur
+
+// const redirection = (url) => {
+//   return (window.location = url);
+// };
+
+// function verif() {
+//   age = Number(prompt(`Qu'elle age avez-vous ?`));
+//   age < 18
+//     ? redirection("https://www.picwictoys.com")
+//     : redirection("https://www.winamax.fr");
+// }
+// verif();
+
+/* Le DOM
+
+  Document Objet Model 
+  Jl fournit une représentation du document sous forme d'un arbre et définit la façon dont la structure peut etre manipulée par votre programme (le JS dans notre cas)
+
+  On peut dire qu'il s'aggit d'une sorte de "passerelle" entre le HTML et le JS
+
+  Grace au dom nous allons être en mesure de venir accéder et/ou modifier notre HTML depuis le JS
+
+  Chaque page chargée dans notre navigateur dispose d'un objet "document" utilisable en Js
+  Cet objet "document" est notre point d'entrée vers notre contenu HTML
+
+  Comment récupéré les différentes informations de notre HTML ?
+
+  document.getElementById("monId");
+Cette méthode va nous permettre de récupérer un élémént HTML à partir de son ID.
+Elle prend en paramètre l'ID de l'élement que l'on souhaite récupérer
+  
+  */
+
+let welcome = document.getElementById("welcome");
+console.log(welcome);
+
+/**
+ * document.getElementByClassName("maClasse")
+ * Cette méthode  va permettre de récupérer un ou plusieurs éléments HTML à partir d'une classe passée en paramétre a la méthode
+ */
+
+let data = document.getElementsByClassName("contenue");
+console.log(data);
+console.log(data[2]);
+
+/**
+ * Contrairement a getElementById on récupére un tableau numérique avec nos élements HTML a l'interieur
+ * A noter aussi que même si la classe n'est utilisée que sur un élément, la méthode retourneras malgré tout une table
+ */
+
+/**
+ * document.getElementByTagName("maBalise")
+ * Cette méthode va nous permettre de récupérer un ou plusieurs  éléments HTML à partir du nom de la balise
+ */
+
+let divs = document.getElementsByTagName("div");
+console.log(divs);
+
+// Récupéré le lien de google
+let google = document.getElementById("googleLink");
+console.log(google);
+
+/**
+ * Nous allons pouvoir accéder au infos de ce lien à partir de l'élément recupéré
+ */
+
+// ou memmene le lien
+console.log(google.href);
+
+// l'ID de l 'éléments
+console.log(google.id);
+
+// contenue de l' élément
+console.log(google.textContent);
+
+// classe de l' éléments
+console.log(google.className);
+
+/**
+ * Comme a une variable "classique" on va pouvoir réaffecter une nouvelle valeur a la propriété souhaité
+ */
+
+google.textContent = "Mon lien vers Google";
+
+data[0].innerHTML = "<img src='img/mooncake.png' alt='Une image'/>";
+
+/**
+ * Ajouter un élément
+ */
+
+// réation de l'élément (m"thode create sur l'objet document)
+
+let p = document.createElement("p");
+// II - définir l'élément
+p.id = "newParagraphe";
+p.textContent = "Mon Paragraphe crée en JS";
+// III - Ajouter a l'élément dans HTML
+data[1].appendChild(p);
+
+// p.style.color="green";
+
+/** Dans un soucis de respect de la séparation des concepts nous éviterons au maximum de manipuler les styles de cette façon. En effet nous privilégirons l'utilisation des classes pour ajouter au supprimer des styles */
+
+p.classList.add("color-red", "text-uppercase"); // Ajoute une ou plusieurs class
+p.classList.remove("text-uppercase"); // Retire une ou plusieurs class
+
+/**
+     * Les événements
+     * 
+     * 
+     * Les événements vont nous permettre de déclencher une fonction (une série d'instructions) suite à une intéraction/action de l'utilisateur
+     * 
+     * Notre objectif : Etre en mesure de capter/capturer ces évenemnts, afin d'exectuter une fonction
+     * 
+     * Nous allons trouver plusieurs types d'évenements
+     * 
+     * -les éveneements à la souris
+     *       *click --> au clic sur un élément
+     *       *mouseenter --> au survol d'un élément
+     *       *mouseleave ---> lorsque l'on quitte le survol d'un élément
+     * 
+     * -les événements au clavier
+     *       *keydown --> une touche du clavier est enfoncée
+     *       *keyup --> une touche de clavier est relachée
+     * 
+     * -les évenements sur la fenêtre
+     *       *scroll --> défilement de la fenêtre
+     *       *resize --> redimentionnement de la fenêtre
+     * 
+     * - Les événement sur un formulaire
+     *       * change ---> auchangement de valeur pour les éléménts <input>,<select>, <textarea>
+     *       * submit ---> avant l'envoi du formulaire
+     * 
+     * - Les événement sur le DOM
+     *       * DOMContentLoades --> lorsque le document HTML est complèment chargé
+     * 
+     *************************************************************************************************************************************
+
+     Les écouteurs d'éveneemnts
+
+     Nous allons avoir besoin d'"attacher" un événement à un élémént ou autrement dit déclarer un écouteur d'éveneement qui se chargera de lancer une action lorsque l'évenemnt se produira --> cette action sera une fonction (cette fonction sera à l'intérieur d'une autre fonction et noux appellerons donc cette fonction une fonction callback)
+     *
+     *
+     * La fonction que nous allons utiliser pour déclarer un écouteur d'evement est addEventListener
+     * 
+     * elmeent.addEventListener("type d'évenemnt", fonction de callback ou nom d'une fonction existante)
+     * 
+     * Exemple : AU clic sur le paragraphe portant d'id welcome, afficher le textez en jaune
+     * 
+     * 1/ Onrécupère l'élément sur lequel nous allons attacher l'écouteur d'éveneement dans l'étape 3
+     */
+let bienvenue = document.getElementById("welcome");
+//2/ On détermine une fonction en mesure de réaliser l'action demandée
+
+function changeColor() {
+  if (bienvenue.style.color == "gold") {
+    bienvenue.style.color = "black";
+  } else {
+    bienvenue.style.color = "gold";
+  }
+}
+
+//  bienvenue.addEventListener("click", changeColor);
+
+// Posssible de passer directement par une fonction de CallBack
+bienvenue.textContent = "Bienvenue sur notre site ";
+bienvenue.addEventListener("click", () => {
+  if (bienvenue.style.color == "gold") {
+    bienvenue.style.color = "black";
+  } else {
+    bienvenue.style.color = "gold";
+  }
+});
+
+/**
+ * Exercice
+ *
+ * En JS uniquement
+ * 1/ créer un champ input
+ * ajouter un type text à ce champ
+ * ajouter id à ce champ (ex: monInput)
+ * ajouer le champ au document HTML
+ * ajouter dans une alerte la saisie de l'utilisateur dès que quelquechose est saisie
+ *
+ */
+
+let input = document.createElement("input");
+input.type = "text";
+input.id = "monInput";
+data[2].appendChild(input);
+input.addEventListener("change", () => {
+  alert(input.value);
+});
