@@ -49,6 +49,6 @@ footer {
     border-top: 10px solid #36C4B3
 }
 
-.vehicle-btn-group-tiny img:hover, .clio-card:hover, nav li:hover, article.m-5:hover, img.mx-4:hover {
+.vehicle-btn-group-tiny img:hover, .clio-card:hover,.moto-card:hover, nav li:hover, article.m-5:hover, img.mx-4:hover {
     transform: scale(1.1);
 }
