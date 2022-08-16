@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  background-color: purple;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.enfant {
+    margin: 2%;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  text-align: justify;
+  border: 1px solid black;
+  background: red;
+  color: white;
+  width: 15%;
+}
