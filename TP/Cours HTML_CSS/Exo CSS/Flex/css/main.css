@@ -3,23 +3,69 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-.parent {
-  padding: 2%;
-  display: flex;
-  justify-content: space-around;
-  background-color: purple;
-  flex-wrap: wrap;
-  gap: 10px;
+h1 {
+  text-align: center;
 }
-.enfant {
-    margin: 2%;
+img {
+  width: 100%;
+}
+button {
+  border: none;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+}
+ion-icon {
+  color: black;
+}
+
+#container {
   display: flex;
-  align-items: center;
-  padding: 1%;
-  text-align: justify;
-  border: 1px solid black;
-  background: red;
-  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 2%;
+  width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+
+.contenue {
+  padding: 2%;
   width: 15%;
+  box-shadow: 10px 7px 25px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 5%;
+  transition: all 0.5s ease-in-out;
+}
+.contenue:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+@media all and (max-width: 1000px) {
+  #container {
+    text-align: center;
+    gap: 20px;
+  }
+  .contenue {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #container {
+    text-align: center;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .contenue {
+    width: 60%;
+    margin: 0 auto;
+  }
 }

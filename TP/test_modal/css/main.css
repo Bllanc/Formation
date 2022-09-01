@@ -1,0 +1,26 @@
+#opac {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.53);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: none;
+}
+
+#obiwan {
+  padding: 2%;
+}
+#obiwan > div {
+  width: 1400px;
+  margin: 0 auto;
+  height: fit-content;
+  z-index: 8;
+  background: white;
+  display: flex;
+  padding: 2%;
+  gap: 10%;
+}
+
+#obiwan > div > img {
+  width: 35%;
+}
