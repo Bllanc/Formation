@@ -12,3 +12,7 @@ let tab = voitures.map((voiture) => voiture.length);
 
 console.log(tab);
 document.write("Lenght des marques : " + tab);
+
+
+
+
