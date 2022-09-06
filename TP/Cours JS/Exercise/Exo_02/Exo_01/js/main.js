@@ -81,7 +81,7 @@
 // let sommes = (a, b) => a + b;
 // console.log(sommes(1, 2));
 
-eleves = [
+let eleves = [
   { nom: "Julien", note: "12" },
   { nom: "Stéphane", note: "15" },
   { nom: "Alice", note: "09" },
@@ -89,8 +89,36 @@ eleves = [
   { nom: "Elise", note: "17" },
 ];
 
-eleves.map((eleve) =>
+// eleves.map((eleve) =>
+//   document.write(
+//     `Nom de l'éléve : ${eleve.nom} || Note de l'éléve : ${eleve.note} <br>`
+//   )
+// );
+
+for (let i = 0; i < eleves.length; i++) {
+  // pour i = 0 , tant que i est inf à la longueur du tableau eleves; i+1
+  document.write(`${eleves[i].nom} a une note de ${eleves[i].note}  <br>`); // Affichage du nom et de la note de l'élève.
+}
+document.write(`<br><br>`);
+
+let i = 0; // Pour i=0
+while (i < eleves.length) {
+  // pendant que i est inf à la longueur du tableau eleve
   document.write(
-    `Nom de l'éléve : ${eleve.nom} || Note de l'éléve : ${eleve.note} <br>`
-  )
+    // Afficahge du nom et de la note
+    `${eleves[i].nom} a obtenue un score de ${eleves[i].note} <br>`
+  );
+  i++; // i+1
+}
+
+document.write(`<br><br>`);
+
+eleves.forEach(function (eleve) {
+  document.write(`${eleve.nom} vient de gagner ${eleve.note} pts <br>`);
+});
+
+document.write(`<br><br>`);
+
+eleves.forEach((eleve) =>
+  document.write(`${eleve.nom} avec une note de ${eleve.note} <br>`)
 );
