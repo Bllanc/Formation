@@ -67,8 +67,7 @@ header {
 	border-radius: 5px;
 	border: 1px solid #ccc;
 }
-
-form .btn {
+ .btn {
 	display: block;
 	width: 100%;
 	padding: 15px;
