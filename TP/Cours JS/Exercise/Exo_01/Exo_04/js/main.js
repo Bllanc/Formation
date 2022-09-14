@@ -22,7 +22,7 @@ const primes = [
 primes.map(prime => {
     let msg = "";
     if (prime.perf > 50) {
-        msg = `id : ${prime.id} perf : ${prime.perf} prime = 10% <br>`;
+        msg = `id : ${prime.id} perf : ${prime.perf} prime =${prime.perf*10/100} <br>`;
     } else {
         msg = `id : ${prime.id} perf : ${prime.perf} prime = 0% <br>`;
     }
@@ -30,6 +30,6 @@ primes.map(prime => {
 });
 */
 
-let tab = primes.map((prime) => document.write(prime.perf > 50 ? `id : ${prime.id} | perf : ${prime.perf} | prime = 10% <br>` : `id : ${prime.id} | perf : ${prime.perf} | prime = 0% <br>`)) // Afficahge dans le body 
+let tab = primes.map((prime) => document.write(prime.perf > 50 ? `id : ${prime.id} | perf : ${prime.perf} | prime =${prime.perf*10/100} <br>` : `id : ${prime.id} | perf : ${prime.perf} | prime = 0% <br>`)) // Afficahge dans le body 
 
 console.log(primes.map((prime) => prime.perf > 50 ? `id : ${prime.id} | perf : ${prime.perf} | prime = 10% <br>` : `id : ${prime.id} | perf : ${prime.perf} | prime = 0% <br>`)); // Affichage dans la console

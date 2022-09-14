@@ -1,0 +1,33 @@
+.para-style {
+    color: skyblue;
+    border: 1px solid skyblue;
+  }
+
+  .para-style-clique {
+    color: gray;
+    border: 1px solid gray;
+  }
+
+  .para-rouge {
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .bg-bc {
+    background: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+  }
+
+  .change-style-css {
+    background: black;
+    color: green;
+    font: size 2rem;
+  }
+
+  .style-each {
+    background: black;
+    color: green;
+    font-size: 1.5rem;
+  }
