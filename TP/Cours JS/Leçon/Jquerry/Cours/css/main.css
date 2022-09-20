@@ -9,7 +9,7 @@
   }
 
   .para-rouge {
-    background-color: red;
+    background-color: red !important;
     color: white;
     font-size: 2rem;
   }
@@ -31,3 +31,8 @@
     color: green;
     font-size: 1.5rem;
   }
+  .bg-bc {
+    background: skyblue;
+    color: white;
+    border: 1px solid skyblue;
+}

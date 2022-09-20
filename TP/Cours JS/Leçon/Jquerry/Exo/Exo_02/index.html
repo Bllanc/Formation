@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Générateur de Mots clés</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="text-center bg-info text-white py-2 fw-bold mb-5">
+      Générateur de Mots clés
+    </h1>
+    <form action="#" method="post" class="col-12 col-md-6 offset-md-3">
+      <div class="mb-3 row">
+        <label for="marque" class="col-sm-3 col-form-label">Marque : </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="marque" id="marque" />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="produit" class="col-sm-3 col-form-label">Produit : </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="produit" id="produit" />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="ref" class="col-sm-3 col-form-label">Référence : </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="ref" id="ref" />
+        </div>
+      </div>
+
+      <div class="mb-3 row">
+        <label for="spec" class="col-sm-3 col-form-label"
+          >Spécification :
+        </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" name="spec" id="spec" />
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary mb-3">Générer</button>
+        <button type="reset" class="btn btn-danger mb-3">Réinitialiser</button>
+      </div>
+      <div class="mb-3 col-12 col-md-9 offset-md-3">
+        <textarea
+          class="form-control"
+          rows="4"
+          name="generation"
+          id="generation"
+        ></textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-info mb-3 copier">Copier</button>
+      </div>
+    </form>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
