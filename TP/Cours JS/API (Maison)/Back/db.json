@@ -1,0 +1,14 @@
+{
+  "cocktails": [
+    {
+      "id": "1664462865219",
+      "nom": "Margarita",
+      "ingredient": "Tequila,Triple Sec,Citron Vert"
+    },
+    {
+      "id": "1664462905024",
+      "nom": "Mojito",
+      "ingredient": "Rhum blanc Feuille de Menthe"
+    }
+  ]
+}

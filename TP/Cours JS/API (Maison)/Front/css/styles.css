@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #ddc3a5;
+  text-align: center;
+  color: #201e20;
+  border-bottom: 3px solid #e0a96d;
+  padding: 1%;
+}
+
+header ul {
+  display: inline-flex;
+  gap: 70px;
+}
+header li {
+  display: inline-flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-items: center;
+}
+
+a {
+  color: #201e20;
+  text-decoration: none;
+}
+
+.cocktails {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: row wrap;
+}
+.produits {
+  padding: 1%;
+  box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.57);
+  text-align: center;
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  word-break: break-word;
+  border-radius: 8px;
+}
+.produits button {
+  padding: 10px;
+  border-radius: 50%;
+  background: #ddc3a5;
+  border: none;
+  font-size: large;
+}

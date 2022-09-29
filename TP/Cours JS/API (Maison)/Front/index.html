@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Interface Admin des contacts" />
+    <meta name="author" content="Rocket Team - AFPA Calais" />
+    <title>Carte des Cocktails</title>
+
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>
+          <a href="#" data-source="liste" class="nav"
+            ><i class="fa-solid fa-martini-glass-citrus"></i> Nos Cocktails</a
+          >
+        </li>
+        <li>
+          <a href="index.html" data-source="tab-bord"
+            ><h1>The Rocket Bar</h1></a
+          >
+        </li>
+        <li>
+          <a href="" data-source="nouveau" class="nav"
+            ><i class="fa-solid fa-wine-bottle"></i> Ajouter un Cocktails</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <!-- Tableau de bord -->
+      <section class="contenu" data-cible="tab-bord">
+        <h2>Tableau de bord</h2>
+      </section>
+
+      <!-- Liste des Cocktails -->
+      <section class="contenu" data-cible="liste">
+        <h2>Liste des cocktails</h2>
+      </section>
+
+      <!-- Ajout de Cocktails -->
+      <section class="contenu" data-cible="nouveau">
+        <h2>Ajout de contact</h2>
+        <form>
+          <div>
+            <label for="nom" class="form-label">Nom :</label>
+            <input type="text" class="form-control" id="nom" name="nom" />
+          </div>
+          <div class="mb-3">
+            <label for="ingredient" class="form-label">Ingrédrient :</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ingredient"
+              name="ingredient"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary px-3">Ajouter</button>
+          <button type="reset" class="btn btn-danger ms-5 px-3">
+            Réinitialiser
+          </button>
+        </form>
+      </section>
+
+      <!-- Modif de Cocktails-->
+      <section class="contenu" data-cible="modif">
+        <h2 class="h1">Modification du Cocktails</h2>
+        <form>
+          <input type="hidden" name="idModif" id="idModif" />
+          <div class="">
+            <label for="nom" class="form-label">Nom :</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nomModif"
+              name="nomModif"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="ingredient" class="form-label">Ingrédient :</label>
+            <input
+              type="text"
+              class="form-control"
+              id="ingredientModif"
+              name="ingredientModif"
+            />
+          </div>
+          <button type="submit">Modifier</button>
+          <button type="reset">Réinitialiser</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
