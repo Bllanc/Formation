@@ -20,6 +20,8 @@ $(document).on(
 $(document).on("click", ".maj", modif);
 $(document).on("click", "section[data-cible=modif] button[type=submit]", maj);
 
+/* FONCTION AJOUT */
+
 function ajout(e) {
   e.preventDefault();
   let donnees = {
@@ -51,7 +53,7 @@ function ajout(e) {
         <div class="toast-body">
           <b>ID : </b> ${response.id} <br>
           <b>Nom :</b> ${response.nom}<br>
-          <b>Prénom :</b> ${response.ingredient}<br>
+          <b>Ingrédient :</b> ${response.ingredient}<br>
           <div class="mt-2 pt-2 border-top">
             <button type="button" class="btn btn-primary btn-sm liste">Liste des contacts</button>
             <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Fermer</button>
@@ -84,6 +86,8 @@ function ajout(e) {
     alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
   });
 }
+
+/* FONCTION AFFICHAGE */
 
 function affichage(e) {
   e.preventDefault();
@@ -127,7 +131,16 @@ function affichage(e) {
     alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
   });
 }
+
+/* FONCTION SUPPRESSION */
+
 function suppression(e) {
+  // 1- récupérer l'id à partir de l'attribut data-id
+  // 2- faire une requete ajax :
+  //   -- verbe HTTP : DELETE
+  //   -- route : contacts/--id
+  //   -- id : id du contact (etape 2)
+
   let id = $(e.target).data("id");
   let request = $.ajax({
     type: "DELETE",
@@ -144,6 +157,9 @@ function suppression(e) {
     alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
   });
 }
+
+/* FONCTION MODIF */
+
 function modif(e) {
   let id = $(e.target).data("id");
   let request = $.ajax({
@@ -152,12 +168,12 @@ function modif(e) {
     dataType: "json",
   });
 
-  request.done(function (response) {
+  request.done(function (cocktail) {
     $(".contenu").hide();
     $("section[data-cible=modif]").show();
-    $("#idModif").val(response.id);
-    $("#nomModif").val(response.nom);
-    $("#ingredientModif").val(response.ingredient);
+    $("#idModif").val(cocktail.id);
+    $("#nomModif").val(cocktail.nom);
+    $("#ingredientModif").val(cocktail.ingredient);
   });
   request.fail(function (http_error) {
     let server_msg = http_error.responseText;
@@ -166,6 +182,8 @@ function modif(e) {
     alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
   });
 }
+
+/* FONCTION MAJ */
 
 function maj(e) {
   e.preventDefault();
@@ -183,21 +201,21 @@ function maj(e) {
     dataType: "json",
   });
 
-  request.done(function (response) {
+  request.done(function (cocktail) {
     let htmlNotif = `
       <button type="button" class="btn btn-primary d-none" id="liveToastBtn">Show live toast</button>
 
       <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="liveToast">
         <div class="toast-header">
           <strong class="me-auto">Mise à jour du contact réussie</strong>
-          <small>${response.id}</small>
+          <small>${cocktail.id}</small>
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
         <h3>Nouvelles valeurs : </h3>
-          <b>ID : </b> ${response.id} <br>
-          <b>Nom :</b> ${response.nom}<br>
-          <b>Ingrédient :</b> ${response.ingredient}<br>
+          <b>ID : </b> ${cocktail.id} <br>
+          <b>Nom :</b> ${cocktail.nom}<br>
+          <b>Ingrédient :</b> ${cocktail.ingredient}<br>
           <div class="mt-2 pt-2 border-top">
             <button type="button" class="btn btn-primary btn-sm liste">Liste des contacts</button>
             <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Fermer</button>
